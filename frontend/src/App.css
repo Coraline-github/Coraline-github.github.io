@@ -1,38 +1,245 @@
-.App {
-    text-align: center;
+/* Custom CSS for Deo SA - Cardboard Box Company */
+
+/* Custom color palette */
+:root {
+  --brown-50: #faf7f2;
+  --brown-100: #f5efe0;
+  --brown-200: #e8d5b7;
+  --brown-300: #d4b896;
+  --brown-400: #c19a6b;
+  --brown-500: #a67c52;
+  --brown-600: #8b6914;
+  --brown-700: #6b5d2f;
+  --brown-800: #4a3728;
+  --brown-900: #3d2f24;
+  
+  --beige-50: #fefcf9;
+  --beige-100: #fdf8f0;
+  --beige-200: #f9ede0;
+  --beige-300: #f2dcc4;
+  --beige-400: #e8c5a0;
+  --beige-500: #d4a574;
+  --beige-600: #c18851;
+  
+  --cream: #faf8f3;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #3d2f24;
+}
+
+/* Custom Tailwind color classes */
+.bg-brown-50 { background-color: var(--brown-50); }
+.bg-brown-100 { background-color: var(--brown-100); }
+.bg-brown-200 { background-color: var(--brown-200); }
+.bg-brown-300 { background-color: var(--brown-300); }
+.bg-brown-400 { background-color: var(--brown-400); }
+.bg-brown-500 { background-color: var(--brown-500); }
+.bg-brown-600 { background-color: var(--brown-600); }
+.bg-brown-700 { background-color: var(--brown-700); }
+.bg-brown-800 { background-color: var(--brown-800); }
+.bg-brown-900 { background-color: var(--brown-900); }
+
+.bg-beige-100 { background-color: var(--beige-100); }
+.bg-beige-200 { background-color: var(--beige-200); }
+.bg-beige-300 { background-color: var(--beige-300); }
+.bg-beige-400 { background-color: var(--beige-400); }
+.bg-beige-500 { background-color: var(--beige-500); }
+.bg-beige-600 { background-color: var(--beige-600); }
+
+.bg-cream { background-color: var(--cream); }
+
+.text-brown-50 { color: var(--brown-50); }
+.text-brown-100 { color: var(--brown-100); }
+.text-brown-200 { color: var(--brown-200); }
+.text-brown-300 { color: var(--brown-300); }
+.text-brown-400 { color: var(--brown-400); }
+.text-brown-500 { color: var(--brown-500); }
+.text-brown-600 { color: var(--brown-600); }
+.text-brown-700 { color: var(--brown-700); }
+.text-brown-800 { color: var(--brown-800); }
+.text-brown-900 { color: var(--brown-900); }
+
+.text-beige-100 { color: var(--beige-100); }
+.text-beige-200 { color: var(--beige-200); }
+.text-beige-300 { color: var(--beige-300); }
+.text-beige-400 { color: var(--beige-400); }
+.text-beige-500 { color: var(--beige-500); }
+.text-beige-600 { color: var(--beige-600); }
+
+.border-brown-300 { border-color: var(--brown-300); }
+.border-brown-500 { border-color: var(--brown-500); }
+.border-brown-700 { border-color: var(--brown-700); }
+
+.focus\:border-brown-500:focus { border-color: var(--brown-500); }
+.focus\:ring-brown-200:focus { 
+  --tw-ring-color: var(--brown-200);
+  --tw-ring-opacity: 0.5;
+}
+
+.hover\:bg-brown-600:hover { background-color: var(--brown-600); }
+.hover\:bg-brown-800:hover { background-color: var(--brown-800); }
+.hover\:bg-beige-600:hover { background-color: var(--beige-600); }
+
+.hover\:text-brown-900:hover { color: var(--brown-900); }
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+/* Smooth transitions for form elements */
+input, select, textarea {
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.3);
+}
+
+/* Custom button styles */
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--brown-700), var(--brown-800));
+  box-shadow: 0 4px 15px rgba(107, 93, 47, 0.3);
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 6px 20px rgba(107, 93, 47, 0.4);
+}
+
+/* Enhanced card shadows */
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Backdrop filter support */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom gradient overlays */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(61, 47, 36, 0.8), rgba(107, 93, 47, 0.6));
+}
+
+/* Mobile menu styles (if needed) */
+@media (max-width: 768px) {
+  .text-5xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 4rem;
+  }
+  
+  .py-20 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Smooth scrolling behavior */
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-    color: #61dafb;
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading 1.5s infinite;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brown-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-500);
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Enhanced focus states for accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--brown-500);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }
